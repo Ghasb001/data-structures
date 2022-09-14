@@ -5,7 +5,6 @@ var Queue = function() {
   newQueue.first = 0;
   newQueue.last = 0;
   extend(newQueue, queueMethods);
-  extend(newQueue, queueMethods)
   return newQueue;
 };
 
@@ -19,7 +18,6 @@ var extend = function(to, from) {
   }
 };
 
-//queueMethods.storage = {};
 
 queueMethods.enqueue = function(value) {
   this[this.last] = value;

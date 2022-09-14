@@ -5,7 +5,6 @@ var Stack = function() {
   newStack.first = 0;
   newStack.last = 0;
   extend(newStack, stackMethods);
-  extend(newStack, stackMethods)
   return newStack;
 };
 
