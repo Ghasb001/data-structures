@@ -21,7 +21,6 @@ var LinkedList = function() {
   };
 
   list.contains = function(target) {
-    console.log(this)
     if (this.head.value === target || this.tail.value === target || this.head.next === target) {
       return true;
     }
