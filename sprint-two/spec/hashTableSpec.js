@@ -16,6 +16,8 @@ describe('hashTable', function() {
   it('should store values that were inserted', function() {
     hashTable.insert('Steven', 'Seagal');
     expect(hashTable.retrieve('Steven')).to.equal('Seagal');
+    hashTable.insert(3, '5');
+    expect(hashTable.retrieve(3)).to.equal('5');
   });
 
   it('should not contain values that were not inserted', function() {

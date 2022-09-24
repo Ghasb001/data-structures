@@ -22,6 +22,9 @@ describe('set', function() {
     set.add('Mel Gibson');
     set.remove('Mel Gibson');
     expect(set.contains('Mel Gibson')).to.equal(false);
+    set.add('alex');
+    set.remove('ALEX');
+    expect(set.contains('alex')).to.equal(false);
   });
 
 });

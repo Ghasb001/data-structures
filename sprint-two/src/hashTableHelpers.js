@@ -18,14 +18,18 @@ var LimitedArray = function(limit) {
   limitedArray.get = function(index) {
     checkLimit(index);
     return storage[index];
+    // put in 3, returns steven
   };
   limitedArray.set = function(index, value) {
     checkLimit(index);
     storage[index] = value;
+    // console.log(storage)
+    // setting index within array as value
   };
   limitedArray.each = function(callback) {
     for (var i = 0; i < storage.length; i++) {
       callback(storage[i], i, storage);
+      // running function on each
     }
   };
 

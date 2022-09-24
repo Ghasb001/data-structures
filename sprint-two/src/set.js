@@ -7,12 +7,14 @@ var Set = function() {
 var setPrototype = {};
 
 setPrototype.add = function(item) {
+  item = item.toUpperCase();
   //console.log(this)
   //console.log(this._storage[item]);
   this._storage[item] = item;
 };
 
 setPrototype.contains = function(item) {
+  item = item.toUpperCase();
   if (this._storage[item] === item) {
     return true;
   }
@@ -20,6 +22,7 @@ setPrototype.contains = function(item) {
 };
 
 setPrototype.remove = function(item) {
+  item = item.toUpperCase();
   if(this._storage[item] !== undefined){
     delete this._storage[item];
     }

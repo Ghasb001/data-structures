@@ -22,8 +22,10 @@ describe('tree', function() {
   });
 
   it('should return false for a value that was not added', function() {
-    tree.addChild(5);
+    tree.addChild('5');
     expect(tree.contains(6)).to.equal(false);
+    //tree.addChild('5');
+    expect(tree.contains(5)).to.equal(true);
   });
 
   it('should be able to add children to a tree\'s child', function() {

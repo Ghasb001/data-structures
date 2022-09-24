@@ -15,9 +15,13 @@ var LinkedList = function() {
   };
 
   list.removeHead = function() {
-      var currentHeadValue = this.head.value;
-      this.head = this.head.next;
-      return currentHeadValue;
+    if (this.head === null) {
+      return;
+    } else if (this.head.value !== null) {
+    var currentHeadValue = this.head.value;
+    this.head = this.head.next;
+    return currentHeadValue;
+    }
   };
 
   list.contains = function(target) {

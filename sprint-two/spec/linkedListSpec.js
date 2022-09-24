@@ -24,6 +24,7 @@ describe('linkedList', function() {
   });
 
   it('should remove the head from the list when removeHead is called', function() {
+    linkedList.removeHead();
     linkedList.addToTail(4);
     linkedList.addToTail(5);
     expect(linkedList.head.value).to.equal(4);

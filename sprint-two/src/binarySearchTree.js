@@ -11,12 +11,21 @@ binaryMethods = {};
 
 binaryMethods.insert = function (value) {
 
-  if (value === null) {
+  if (value == null) {
     return null;
-  } else if (value !== null) {
-  this.nodes.push(value)
-}
-  var tree = BinarySearchTree(value);
+  } else if (typeof value === 'string') {
+    this.nodes.push(parseInt(value))
+  } else {
+    this.nodes.push(value)
+  }
+
+//   if (value === null) {
+//     return null;
+//   } else if (value !== null) {
+//   this.nodes.push(value)
+// }
+
+  var tree = BinarySearchTree(parseInt(value));
   if (!this) {
     this.value = tree;
   } else if (value < this.value) {

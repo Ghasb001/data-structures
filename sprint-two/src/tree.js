@@ -11,6 +11,7 @@ var Tree = function(value) {
 var treeMethods = {};
 
 treeMethods.addChild = function(value) {
+  value = parseInt(value);
   //console.log(value);
   var child = new Tree(value);
   this.children.push(child);
